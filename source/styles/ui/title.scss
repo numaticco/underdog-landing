@@ -1,0 +1,41 @@
+.title {
+  color: $white;
+
+  &--h1 {
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 127%;
+    letter-spacing: 0.5px;
+
+    @media (max-width: $tablet-max-width) {
+      font-size: 28px;
+    }
+  }
+
+  &--h3 {
+    font-family: $OswaldSemiBold;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 1px;
+
+    @media (max-width: $tablet-max-width) {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &--h4 {
+    font-family: $RobotoMedium;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+  }
+
+  &__accent {
+    font-family: $RobotoMedium;
+    color: $yellow;
+  }
+}

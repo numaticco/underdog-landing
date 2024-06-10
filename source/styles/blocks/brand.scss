@@ -1,0 +1,34 @@
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  border-top: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+
+  &__title-logo {
+    width: 728px;
+    height: 142px;
+
+    @media (max-width: $tablet-max-width) {
+      width: 580px;
+      height: 116px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      width: 256px;
+      height: 48px;
+
+    }
+  }
+
+  @media (max-width: $tablet-min-width) {
+    height: 420px;
+  }
+}

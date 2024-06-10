@@ -1,0 +1,88 @@
+.info {
+  background-image: url('../../images/info_background@1x.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 100vh;
+
+  &__title {
+    padding: 88px;
+    text-align: left;
+    width: 100%;
+    max-width: 776px;
+    margin: 0;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding: 24px;
+    }
+  }
+
+  &__scroll-button {
+    position: absolute;
+    bottom: 24px;
+    left: calc(50% - 115px);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $yellow;
+    display: flex;
+    align-items: center;
+    gap: 24px;cursor: pointer;
+    text-decoration: none;
+
+    img {
+      width: 16px;
+      height: 16px;
+
+      animation: bounce 1s infinite linear;
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0%);
+        }
+
+        50% {
+          transform: translateY(30%);
+        }
+
+        100% {
+          transform: translateY(0%);
+        }
+      }
+    }
+
+    span {
+      font-family: $RobotoLight;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      display: none;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url('../../images/info_background@2x.jpeg');
+  }
+
+  @media (max-width: $tablet-min-width) {
+    background-position-y: 50px;
+    height: 420px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-size: auto 100%;
+  }
+
+
+}

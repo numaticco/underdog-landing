@@ -1,0 +1,38 @@
+.people {
+  background-image: url('../../images/people_background@1x.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 100vh;
+
+  &__title {
+    padding: 88px;
+    text-align: left;
+    width: 100%;
+    max-width: 776px;
+    margin: 0;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding: 24px;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url('../../images/people_background@2x.jpeg');
+  }
+
+  @media (max-width: $tablet-min-width) {
+    height: 420px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-size: auto 100%;
+  }
+}

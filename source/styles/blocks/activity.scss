@@ -1,0 +1,333 @@
+.activity {
+  height: auto;
+  text-align: left;
+  scroll-snap-align: end;
+
+  &__title {
+    font-family: $OswaldMedium;
+    font-size: 58px;
+    line-height: 76px;
+    letter-spacing: 0.5px;
+    margin: 0 0 44px;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet-min-width) {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__description {
+    padding: 88px;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding: 32px 20px;
+    }
+  }
+
+  &__description-list-wrapper {
+    display: flex;
+    gap: 44px;
+    margin-bottom: 32px;
+
+    @media (max-width: $tablet-max-width) {
+      display: block;
+    }
+  }
+
+  &__description-list-images {
+    width: 720px;
+    height: 550px;
+
+    @media (max-width: $tablet-max-width) {
+      min-width: 584px;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      min-width: unset;
+      margin-bottom: 24px;
+      height: 242px;
+    }
+  }
+
+  &__description-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__description-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (max-width: $tablet-min-width) {
+      gap: 20px;
+    }
+  }
+
+  &__description-item-title {
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    gap: 16px;
+    margin: 0 0 16px;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 32px;
+      height: 32px;
+      background-image: url('../../icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  & .title--h4 {
+    @media (max-width: $tablet-min-width) {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  &__description-item-info {
+    display: none;
+    list-style: disc;
+    margin-left: 48px;
+    padding-left: 20px;
+
+    li {
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.5px;
+
+      @media (max-width: $tablet-min-width) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__description-item {
+    &--active {
+      .activity__description-item-info {
+        display: block;
+      }
+
+      .activity__description-item-title {
+        color: $yellow;
+
+        &:before {
+          background-image: url('../../icons/arrow-down.svg');
+        }
+      }
+    }
+  }
+
+  &__articles {
+    padding: 0 88px 88px;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 0 64px 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding:  0 20px 20px;
+    }
+  }
+
+  &__articles-description {
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-align: left;
+    margin: 0;
+
+    @media (max-width: $tablet-min-width) {
+      font-size: 16px;
+    }
+  }
+
+  &__articles-description-accent {
+    font-family: $RobotoMedium;
+    color: $yellow;
+  }
+
+  &__articles-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 44px;
+
+    @media (max-width: $tablet-min-width) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  &__articles-item-image {
+    width: 100%;
+    height: 212px;
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__articles-item-description-title {
+    text-transform: uppercase;
+  }
+
+  &__articles-item-description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    text-align: left;
+  }
+
+  &__partners {
+    padding: 0 88px 88px;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 0 64px 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding:  0 20px 20px;
+    }
+  }
+
+  &__partners-wrapper {
+    position: relative;
+
+    &:before {
+      pointer-events: none;
+      z-index: 10;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 66px;
+      background: linear-gradient(90deg, #000101 0%, rgba(0, 1, 1, 0) 10%, rgba(0, 1, 1, 0) 90%, #000101 100%);
+    }
+  }
+
+  &__partners-list {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__quote {
+    border-top: 4px solid rgba(255, 202, 0, 1);
+    border-bottom: 4px solid rgba(255, 202, 0, 1);
+    padding: 88px;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 64px;
+    }
+
+    @media (max-width: $tablet-min-width) {
+      padding: 32px 20px;
+    }
+  }
+
+  &__quote-wrapper {
+    width: 100%;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      display: block;
+      content: '';
+      width: 40px;
+      height: 36px;
+      background-image: url('../../icons/quote.svg');
+
+      @media (max-width: $tablet-max-width) {
+        width: 20px;
+        height: 16px;
+        top: 0;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+      display: block;
+      content: '';
+      width: 40px;
+      height: 36px;
+      background-image: url('../../icons/quote.svg');
+      transform: rotate(180deg);
+
+      @media (max-width: $tablet-max-width) {
+        width: 20px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__quote-text {
+    font-family: $OswaldSemiBold;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto 44px;
+
+    @media (max-width: $tablet-max-width) {
+      font-size: 20px;
+      line-height: 28px;
+      padding: 0 20px;
+      width: unset;
+      margin: 0 auto 16px;
+    }
+  }
+
+  &__quote-author {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+
+    @media (max-width: $tablet-max-width) {
+      font-size: 12px;
+    }
+  }
+}

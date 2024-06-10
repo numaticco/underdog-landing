@@ -1,0 +1,20 @@
+.button {
+  background-color: $yellow;
+  cursor: pointer;
+  border: none;
+  font-family: $OswaldSemiBold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: $transition;
+
+  &:hover {
+    background-color: $yellow-hover;
+    transition: $transition;
+  }
+
+  @media (max-width: $tablet-min-width) {
+    line-height: 100%;
+  }
+}
