@@ -1,1 +1,59 @@
-var i=document.querySelector(".about"),a=document.querySelector(".people"),c=document.querySelector(".brand"),n=document.querySelector(".people__title"),s=document.querySelector(".brand__title-logo"),r=document.querySelector(".main__scroll-wrapper"),l=document.querySelectorAll(".about__image-color"),o=document.querySelectorAll(".activity__description-item"),d=document.querySelectorAll(".activity__description-item-image");AOS.init({disable:"phone",easing:"ease-in-out-back"});new Splide(".splide",{arrows:!1,pagination:!1,drag:"free",focus:"center",autoWidth:!0,pauseOnHover:!1,pauseOnFocus:!1,perPage:8,autoScroll:{speed:1}}).mount(window.splide.Extensions);var u=()=>{l.forEach(e=>{e.classList.remove("about__image-color--hide")})};r.addEventListener("scroll",()=>{i.getBoundingClientRect().top<80&&i.getBoundingClientRect().top>0&&u(),c.getBoundingClientRect().top<300&&s.classList.add("aos-animate"),a.getBoundingClientRect().top<300&&n.classList.add("aos-animate")});o.forEach(e=>{e.addEventListener("click",()=>{o.forEach(t=>{t.classList.remove("activity__description-item--active")}),e.classList.add("activity__description-item--active"),d.forEach(t=>{t.classList.remove("activity__description-item-image--active"),t.id.includes(e.id)&&t.classList.add("activity__description-item-image--active")})})});
+// source/scripts/index.js
+var aboutContainer = document.querySelector(".about");
+var peopleContainer = document.querySelector(".people");
+var brandContainer = document.querySelector(".brand");
+var peopleContainerTitle = document.querySelector(".people__title");
+var brandContainerTitle = document.querySelector(".brand__title-logo");
+var mainScrollWrapper = document.querySelector(".main__scroll-wrapper");
+var aboutColorImages = document.querySelectorAll(".about__image-color");
+var activityDescriptionItems = document.querySelectorAll(".activity__description-item");
+var activityDescriptionImages = document.querySelectorAll(".activity__description-item-image");
+AOS.init({
+  disable: "phone",
+  easing: "ease-in-out-back"
+});
+new Splide(".splide", {
+  arrows: false,
+  pagination: false,
+  type: "loop",
+  drag: "free",
+  focus: "center",
+  autoWidth: true,
+  perPage: 8,
+  autoScroll: {
+    speed: 1,
+    pauseOnHover: false
+  }
+}).mount(window.splide.Extensions);
+var showColoredAboutImages = () => {
+  aboutColorImages.forEach((item) => {
+    item.classList.remove("about__image-color--hide");
+  });
+};
+mainScrollWrapper.addEventListener("scroll", () => {
+  if (aboutContainer.getBoundingClientRect().top < 80 && aboutContainer.getBoundingClientRect().top > 0) {
+    showColoredAboutImages();
+  }
+  ;
+  if (brandContainer.getBoundingClientRect().top < 300) {
+    brandContainerTitle.classList.add("aos-animate");
+  }
+  if (peopleContainer.getBoundingClientRect().top < 300) {
+    peopleContainerTitle.classList.add("aos-animate");
+  }
+});
+activityDescriptionItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    activityDescriptionItems.forEach((descriptionItem) => {
+      descriptionItem.classList.remove("activity__description-item--active");
+    });
+    item.classList.add("activity__description-item--active");
+    activityDescriptionImages.forEach((descriptionImage) => {
+      descriptionImage.classList.remove("activity__description-item-image--active");
+      if (descriptionImage.id.includes(item.id)) {
+        descriptionImage.classList.add("activity__description-item-image--active");
+      }
+    });
+  });
+});
+//# sourceMappingURL=index.js.map

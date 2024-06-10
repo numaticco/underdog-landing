@@ -18,15 +18,14 @@ AOS.init({
 new Splide('.splide', {
     arrows: false,
     pagination: false,
-    // type   : 'loop',
+    type   : 'loop',
     drag   : 'free',
     focus  : 'center',
     autoWidth: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
     perPage: 8,
     autoScroll: {
         speed: 1,
+        pauseOnHover: false,
     },
 }).mount(window.splide.Extensions);
 
