@@ -11,12 +11,11 @@
     &::-webkit-scrollbar {
       display: none;
     }
-  }
 
-  @media (max-width: $tablet-min-width) {
-    scroll-snap-type: unset;
+    @media (max-width: $tablet-min-width) {
+      scroll-snap-type: unset;
+    }
   }
-
 }
 
 .panel {

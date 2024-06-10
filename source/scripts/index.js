@@ -15,8 +15,6 @@ const activityDescriptionItems = document.querySelectorAll('.activity__descripti
 const activityDescriptionImages = document.querySelectorAll('.activity__description-item-image')
 const activityArticlesItems = document.querySelectorAll('.activity__articles-item')
 
-// window. scrollTo(0, 0)
-
 AOS.init({
     disable: 'phone',
     easing: 'ease-in-out-back'
@@ -55,8 +53,6 @@ mainScrollWrapper.addEventListener('scroll', () => {
         peopleContainerTitle.classList.add('aos-animate')
     }
 
-    console.log(activityContainer.getBoundingClientRect().top);
-
     if (activityContainer.getBoundingClientRect().top < 300) {
         activityDescriptionListImages.classList.add('aos-animate')
         activityDescriptionList.classList.add('aos-animate')
@@ -71,7 +67,9 @@ mainScrollWrapper.addEventListener('scroll', () => {
     }
 
     if (activityContainer.getBoundingClientRect().top > 100) {
-        mainScrollWrapper.style['scroll-snap-type'] = 'y mandatory'
+        if(window.innerWidth > 720) {
+            mainScrollWrapper.style['scroll-snap-type'] = 'y mandatory'
+        }
     }
 
     if (activityContainer.getBoundingClientRect().top < -600) {
@@ -105,6 +103,3 @@ activityDescriptionItems.forEach(item => {
         })
     })
 })
-
-
-
