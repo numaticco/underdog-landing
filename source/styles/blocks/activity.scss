@@ -1,7 +1,7 @@
 .activity {
   height: auto;
   text-align: left;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 
   &__title {
     font-family: $OswaldMedium;

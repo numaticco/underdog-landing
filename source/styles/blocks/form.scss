@@ -90,6 +90,8 @@
     letter-spacing: 0.5px;
     text-align: left;
     transition: $transition;
+    border-radius: 0;
+    -webkit-appearance: none;
 
     &:hover {
       transition: $transition;
@@ -124,7 +126,6 @@
     gap: 12px;
     width: 148px;
     color: $black;
-    border-radius: 0;
 
     img {
       width: 32px;
