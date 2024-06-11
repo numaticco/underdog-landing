@@ -37,7 +37,9 @@ new Splide('#partners', {
 new Splide('#images', {
     arrows: false,
     pagination: false,
-    type   : 'loop',
+    type   : 'fade',
+    rewind: true,
+    speed: 1000,
     autoplay: 'play',
     perPage : 1,
     pauseOnHover: false,
