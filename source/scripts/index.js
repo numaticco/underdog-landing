@@ -20,7 +20,7 @@ AOS.init({
     easing: 'ease-in-out-back'
 });
 
-new Splide('.splide', {
+new Splide('#partners', {
     arrows: false,
     pagination: false,
     type   : 'loop',
@@ -33,6 +33,16 @@ new Splide('.splide', {
         pauseOnHover: false,
     },
 }).mount(window.splide.Extensions);
+
+new Splide('#images', {
+    arrows: false,
+    pagination: false,
+    type   : 'loop',
+    autoplay: 'play',
+    perPage : 1,
+    pauseOnHover: false,
+    interval: 2000
+}).mount();
 
 const showColoredAboutImages = () => {
     aboutColorImages.forEach(item => {
@@ -94,12 +104,12 @@ activityDescriptionItems.forEach(item => {
         })
         item.classList.add('activity__description-item--active')
 
-        activityDescriptionImages.forEach(descriptionImage => {
-            descriptionImage.classList.remove('activity__description-item-image--active')
-
-            if (descriptionImage.id.includes(item.id)) {
-                descriptionImage.classList.add('activity__description-item-image--active')
-            }
-        })
+        // activityDescriptionImages.forEach(descriptionImage => {
+        //     descriptionImage.classList.remove('activity__description-item-image--active')
+        //
+        //     if (descriptionImage.id.includes(item.id)) {
+        //         descriptionImage.classList.add('activity__description-item-image--active')
+        //     }
+        // })
     })
 })

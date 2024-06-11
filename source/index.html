@@ -152,43 +152,41 @@
         <section class="panel activity">
             <div class="activity__description">
                 <h1 class="activity__title">what we do</h1>
-                <div class="activity__description-list-wrapper">
-                    <div class="activity__description-list-images"
-                         data-aos="fade-right"
-                         data-aos-offset="200"
-                         data-aos-delay="50"
-                         data-aos-duration="1000">
-                        <img class="activity__description-item-image activity__description-item-image--active"
-                             id="consulting-img"
-                             src="images/activity/activity_list-image_1@1x.jpg"
-                             srcset="images/activity/activity_list-image_1@2x.jpg 2x" alt="Brand consulting">
-                        <img class="activity__description-item-image"
-                             id="experiences-img"
-                             src="images/activity/activity_list-image_2@1x.jpg"
-                             srcset="images/activity/activity_list-image_2@2x.jpg 2x" alt="Brand experiences + live events">
-                        <img class="activity__description-item-image"
-                             id="impact-img"
-                             src="images/activity/activity_list-image_3@1x.jpeg"
-                             srcset="images/activity/activity_list-image_3@2x.jpeg 2x" alt="Social impact">
-                        <img class="activity__description-item-image"
-                             id="partnerships-img"
-                             src="images/activity/activity_list-image_4@1x.jpg"
-                             srcset="images/activity/activity_list-image_4@2x.jpg 2x" alt="Strategic partnerships">
-                        <img class="activity__description-item-image"
-                             id="marketing-img"
-                             src="images/activity/activity_list-image_5@1x.jpg"
-                             srcset="images/activity/activity_list-image_5@2x.jpg 2x" alt="Integrated marketing">
-                        <img class="activity__description-item-image"
-                             id="innovation-img"
-                             src="images/activity/activity_list-image_6@1x.jpeg"
-                             srcset="images/activity/activity_list-image_6@2x.jpeg 2x" alt="Advisory + innovation">
+                <div class="activity__description-list-wrapper" aria-label="images">
+                    <div class="splide" id="images">
+                        <div class="splide__track">
+                            <div class="activity__description-list-images splide__list"
+                                 data-aos="fade-right"
+                                 data-aos-offset="200"
+                                 data-aos-delay="50"
+                                 data-aos-duration="1000">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_1@1x.jpg"
+                                     srcset="images/activity/activity_list-image_1@2x.jpg 2x" alt="Brand consulting">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_2@1x.jpg"
+                                     srcset="images/activity/activity_list-image_2@2x.jpg 2x" alt="Brand experiences + live events">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_3@1x.jpeg"
+                                     srcset="images/activity/activity_list-image_3@2x.jpeg 2x" alt="Social impact">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_4@1x.jpg"
+                                     srcset="images/activity/activity_list-image_4@2x.jpg 2x" alt="Strategic partnerships">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_5@1x.jpg"
+                                     srcset="images/activity/activity_list-image_5@2x.jpg 2x" alt="Integrated marketing">
+                                <img class="activity__description-item-image splide__slide"
+                                     src="images/activity/activity_list-image_6@1x.jpeg"
+                                     srcset="images/activity/activity_list-image_6@2x.jpeg 2x" alt="Advisory + innovation">
+                            </div>
+                        </div>
                     </div>
                     <ul class="activity__description-list"
                         data-aos="fade-left"
                         data-aos-offset="200"
                         data-aos-delay="50"
                         data-aos-duration="1000">
-                        <li class="activity__description-item activity__description-item--active" id="consulting">
+                        <li class="activity__description-item activity__description-item--active">
                             <h4 class="activity__description-item-title title title--h4">Brand consulting</h4>
                             <ul class="activity__description-item-info">
                                 <li>Strategic Framework</li>
@@ -199,7 +197,7 @@
                                 <li>KPI Analysis</li>
                             </ul>
                         </li>
-                        <li class="activity__description-item" id="experiences">
+                        <li class="activity__description-item">
                             <h4 class="activity__description-item-title title title--h4">Brand experiences + live
                                 events</h4>
                             <ul class="activity__description-item-info">
@@ -211,7 +209,7 @@
                                 <li>Thought Leadership Conferences</li>
                             </ul>
                         </li>
-                        <li class="activity__description-item" id="impact">
+                        <li class="activity__description-item">
                             <h4 class="activity__description-item-title title title--h4">Social impact</h4>
                             <ul class="activity__description-item-info">
                                 <li>Impact-Focused Programming</li>
@@ -221,7 +219,7 @@
                                 <li>Non-Profit Campaign and Fundraising Strategies</li>
                             </ul>
                         </li>
-                        <li class="activity__description-item" id="partnerships">
+                        <li class="activity__description-item">
                             <h4 class="activity__description-item-title title title--h4">Strategic partnerships</h4>
                             <ul class="activity__description-item-info">
                                 <li>Creative + Collaboration Ideation</li>
@@ -232,7 +230,7 @@
                                 <li>Partnerships Activation + Management</li>
                             </ul>
                         </li>
-                        <li class="activity__description-item" id="marketing">
+                        <li class="activity__description-item">
                             <h4 class="activity__description-item-title title title--h4">Integrated marketing</h4>
                             <ul class="activity__description-item-info">
                                 <li>Go To Market Approach</li>
@@ -242,7 +240,7 @@
                                 <li>Research + Analysis</li>
                             </ul>
                         </li>
-                        <li class="activity__description-item" id="innovation">
+                        <li class="activity__description-item" >
                             <h4 class="activity__description-item-title title title--h4">Advisory + innovation</h4>
                             <ul class="activity__description-item-info">
                                 <li>What's Next CoLabs™</li>
@@ -335,7 +333,7 @@
                  data-aos-offset="200"
                  data-aos-delay="50"
                  data-aos-duration="1000">
-                <div class="activity__partners-wrapper splide" aria-label="partners">
+                <div class="activity__partners-wrapper splide" aria-label="partners" id="partners">
                     <h1 class="activity__title">Our proud network of partners</h1>
                     <div class="splide__track">
                         <div class="activity__partners-list splide__list">
