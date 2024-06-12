@@ -75,7 +75,7 @@ mainScrollWrapper.addEventListener('scroll', () => {
     }
 
     if (activityContainer.getBoundingClientRect().top < 100) {
-        mainScrollWrapper.style['scroll-snap-type'] = 'none'
+        mainScrollWrapper.style['scroll-snap-type'] = 'unset'
     }
 
     if (activityContainer.getBoundingClientRect().top > 100) {
@@ -105,13 +105,5 @@ activityDescriptionItems.forEach(item => {
             descriptionItem.classList.remove('activity__description-item--active')
         })
         item.classList.add('activity__description-item--active')
-
-        // activityDescriptionImages.forEach(descriptionImage => {
-        //     descriptionImage.classList.remove('activity__description-item-image--active')
-        //
-        //     if (descriptionImage.id.includes(item.id)) {
-        //         descriptionImage.classList.add('activity__description-item-image--active')
-        //     }
-        // })
     })
 })
