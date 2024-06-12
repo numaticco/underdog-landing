@@ -13,6 +13,8 @@
     }
 
     @media (max-width: $tablet-min-width) {
+      height: auto;
+      overflow-y: hidden;
       scroll-snap-type: unset;
     }
   }
